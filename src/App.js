@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:18000/cars').then(e => e.json()).then(setCars)
 
-    fetch('http://localhost:18000/accaunts').then(e => e.json()).then(console.log)
+    fetch('http://localhost:18000/accounts').then(e => e.json()).then(console.log)
   }, []);
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          <h3>Евть машины:</h3>
+          <h3>Еcть машины:</h3>
           <ul>
             {cars && cars.map( ({ Name, Cylinders }, ind) => {
               return (<li key={ind}>
