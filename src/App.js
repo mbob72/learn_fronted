@@ -40,12 +40,13 @@ function App() {
         <p>
           <h3>Клиенты</h3>
           <ul>
-            {accaunts && accaunts.map(({name}, ind) => {
+            {accaunts && accaunts.map(({ name}, ind) => {
                 return (
                   <li key={ind}>
-                    <div>Имя: {name["first"]}</div>
+                    <div>Имя: {name.first}</div>
 					<div>
-
+						<span>Фамилия: </span>
+						<span>{name.last}</span>
 					</div>
                   </li>
                 );
